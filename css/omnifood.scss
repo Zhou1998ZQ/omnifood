@@ -1,0 +1,33 @@
+/* main stylesheet for Omnifood website */
+
+/* load modules */ 
+
+@use 'reset';
+
+/* import bootstrap */
+
+/* setting variables */ 
+
+// overwriting bootstrap $themecolors
+$primary: #F1F0E8;
+$secondary: #85C384;
+$light: #F1F0E8;
+$dark: #333333;
+$success: #016A70;
+
+$emphasis-color-rgb:$dark;
+
+$ff: 'Quicksand', sans-serif;
+$fw-n: 300;
+$fw-m: 600;
+$fw-b: 800;
+$fs-4: 2rem;
+$fw-m: 3.5rem;
+$fs-p: 1rem;
+$fs-6: 1.5rem;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    font: $ff $fw-n;
+}
