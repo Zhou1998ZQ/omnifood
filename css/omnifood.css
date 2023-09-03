@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* main stylesheet for Omnifood website */
-/* load modules */
 /* scss module to reset style rules */
 /* reset styles */
 /* Box sizing rules */
@@ -94,8 +93,6 @@ ul {
   background-color: lightblue;
 }
 
-/* import bootstrap */
-/* setting variables */
 /*!
  * Bootstrap  v5.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
