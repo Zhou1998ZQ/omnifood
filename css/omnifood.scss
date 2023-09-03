@@ -4,6 +4,8 @@
 
 @use 'reset';
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap');
+
 // overwriting bootstrap default variables
 
 $primary: #F1F0E8;
@@ -14,14 +16,7 @@ $success: #016A70;
 
 $emphasis-color-rgb:$dark;
 
-$ff: 'Quicksand', sans-serif;
-$fw-n: 300;
-$fw-m: 600;
-$fw-b: 800;
-$fs-4: 2rem;
-$fw-m: 3.5rem;
-$fs-p: 1rem;
-$fs-6: 1.5rem;
+$font-family-base: 'Poppins', sans-serif;
 
 // import bootstrap
 
@@ -29,6 +24,17 @@ $fs-6: 1.5rem;
 
 // declare custom styles
 
-body {
-    font: $ff $fw-n;
+.logo {
+    min-width: 200px;
+}
+
+footer {
+    font-size: .8rem;
+    .foot-header {
+    font-size: .9rem;
+}
+}
+
+.foot-logo {
+    width:200px;
 }
