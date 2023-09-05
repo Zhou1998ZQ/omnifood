@@ -12067,7 +12067,7 @@ textarea.form-control-lg {
   }
 }
 .logo {
-  min-width: 200px;
+  border-radius: 50%;
 }
 
 footer {

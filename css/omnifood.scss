@@ -3,7 +3,7 @@
 // load modules
 
 @use 'reset';
-
+@use 'navigation';
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap');
 
 // overwriting bootstrap default variables
@@ -25,7 +25,7 @@ $font-family-base: 'Poppins', sans-serif;
 // declare custom styles
 
 .logo {
-    min-width: 200px;
+    border-radius: 50%;
 }
 
 footer {
