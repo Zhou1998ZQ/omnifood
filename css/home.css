@@ -9,8 +9,8 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+  /*margin: 0;
+  padding: 0;*/
   box-sizing: border-box; }
 
 /*html {
@@ -26,7 +26,7 @@
     html {
       font-size: 75%; } }*/
 
-body {
+/*body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.7;
@@ -34,7 +34,7 @@ body {
    }
   @media (max-width: 56.25em) {
     body {
-      padding: 0; } }
+      padding: 0; } }*/
 
 .header {
   height: 95vh;
