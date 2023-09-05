@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>How it Works</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/howItWork.css">
+    <link rel="stylesheet" href="css/omnifood.css">
 </head>
+
 <body>
-    
+    <nav class="navbar bg-light navbar-expand-sm container-fluid">
+        <a class="navbar-brand px-5" href="index.html">
+            <img class="logo" src="img/logo-rectangle.png" title="Omnifood logo" alt="Omnifood logo">
+        </a>
+        <!-- navbar links -->
+        <ul class="navbar-nav ml-auto justify-content-end text-nowrap pe-5">
+            <li class="nav-item">
+                <a class="nav-link link-dark text-secondary" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="howitwork.html">How It Works</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="recipes.html">Recipes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="header" class="container-fluid p-5 mt-5">
+        <h1 id="h1">Your daily dose of health in 3 simple steps</h1>
+    </div>
+    <div class="container text-center">
+        <div class="row" id="r1">
+            <div class="col-6">
+                <div class="step-text-box">
+                    <p class="step-number">01</p>
+                    <h3 class="step-header">Tell us what you like (and what not)</h3>
+                    <p class="step-content">Never again waste time thinking about what to eat! Omnifood AI will create a
+                        100% personalized
+                        weekly meal plan just for you. It makes sure you get all the nutrients and vitamins you need, no
+                        matter what diet you follow!</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="image-container">
+                    <img class="appImage" src="./img/app-screen-1.png">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="r2">
+            <div class="col-6">
+                <div class="image-container">
+                    <img class="appImage" src="./img/app-screen-2.png">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="step-text-box">
+                    <p class="step-number">02</p>
+                    <h3 class="step-header">Approve your weekly meal plan</h3>
+                    <p class="step-content">Once per week, approve the meal plan generated for you by Omnifood AI. You
+                        can change ingredients, swap entire meals, or even add your own recipes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="step-text-box">
+                    <p class="step-number">03</p>
+                    <h3 class="step-header">Receive meals at convenient time</h3>
+                    <p class="step-content">Best chefs in town will cook your selected meal every day, and we will
+                        deliver it to your door whenever works best for you. You can change delivery schedule and
+                        address daily!</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="image-container">
+                    <img class="appImage" src="./img/app-screen-3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="jumbotron-fluid text-center bg-light p-5">
+        <div class="container text-dark">
+            <div class="row">
+                <div class="col">
+                    <img class="logo" src="img/logo-rectangle.png" title="Omnifood logo" alt="Omnifood logo">
+                    <p>Copyright &copy; Omnifood 2023. All Rights Reserved.</p>
+                </div>
+                <div class="col">
+                    <h3 class="foot-header">Contact Us</h3>
+                    <address class="my-1">21 275 Lakeshore Road, Sainte-Anne-de-Bellevue, QC, H9X 3L9</address>
+                    <p class="my-1">514-555-6969</p>
+                    <a class="link-dark" href="mailto:info@omnifood.com">info@omnifood.com</a>
+                </div>
+                <div class="col">
+                    <h3 class="foot-header">Resources</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="link-dark" href="#">Recipe Directory</a></li>
+                        <li class="nav-item"><a class="link-dark" href="#">Careers</a></li>
+                        <li class="nav-item"><a class="link-dark" href="#">Terms and Conditions
+                            </a></li>
+                        <li class="nav-item"><a class="link-dark" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const imageList = document.querySelectorAll('.image-container')
+        const yRange = [-15, 15]
+        const xRange = [-15, 15]
+
+        function getRotate(range, v, max) {
+            return v / max * (range[1] - range[0]) + range[0]
+        }
+
+        for (let i = 0; i < imageList.length; i++) {
+            imageList[i].onmousemove = function (e) {
+                const {
+                    offsetX,
+                    offsetY
+                } = e;
+                const {
+                    offsetWidth,
+                    offsetHeight
+                } = imageList[i];
+
+                const ry = getRotate(yRange, offsetX, offsetWidth)
+                const rx = getRotate(xRange, offsetY, offsetHeight)
+                imageList[i].style.setProperty('--rx', `${rx}deg`)
+                imageList[i].style.setProperty('--ry', `${ry}deg`)
+
+            }
+
+
+            imageList[i].onmouseout = function (e) {
+                imageList[i].style.setProperty('--rx', `0deg`)
+                imageList[i].style.setProperty('--ry', `0deg`)
+            }
+        }
+    </script>
 </body>
+
 </html>
