@@ -13,39 +13,42 @@
     <link rel="stylesheet" href="../css/home.css" />
   </head>
 
-  <body>
-    <nav class="navbar bg-light navbar-expand-sm container-fluid">
-      <a class="navbar-brand px-5" href="index.html">
-        <img
-          class="logo"
-          src="img/logo-rectangle.png"
-          title="Omnifood logo"
-          alt="Omnifood logo"
-        />
+  <body>    
+    <nav class="navbar navbar-expand-md bg-light px-5">
+    <div class="container-fluid">
+      <a class="navbar-brand pe-5" href="home.html">
+        <img class="logo" src="../img/logo3.png" title="Omnifood logo" alt="Omnifood logo">
       </a>
+      <!-- hamburger menu icon -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
       <!-- navbar links -->
-      <ul class="navbar-nav ml-auto justify-content-end text-nowrap pe-5">
-        <li class="nav-item">
-          <a class="nav-link link-dark text-secondary" href="home.html"
-            >Maison</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../fr/howItWork_fr.html"
-            >Comment ça fonctionne</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../fr/meals_fr.html">Recettes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../fr/testimonials_fr.html">Témoignages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../fr/price_fr.html">Tarifs</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-nowrap">
+      <li class="nav-item">
+        <a class="nav-link" href="home_fr.html">Accueil</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" href="howitwork_fr.html">Comment ça marche</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" href="meals_fr.html">Repas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="testimonials_fr.html">Témoignages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="price_fr.html">Prix</a>
+      </li>
+      <li class="nav-item">
+        <a href="../fr/howItWork_fr.html" class="nav-link link-lang">English</a>
+      </li>
+    </ul>
+</div>
+</nav>
     <div class="container-fluid p-5 mt-5 cont">
       <main class="main">
         <div class="box">

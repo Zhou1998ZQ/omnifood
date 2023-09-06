@@ -454,17 +454,3 @@
       bottom: 0;
       z-index: -1;
     }
-
-    .french-lang{
-      float: right;
-      position: absolute;
-      top: 40%;
-      right: 10%;
-      color: black;
-      text-decoration: none;
-      font-weight: 400;
-      color: #df7e30;
-      
-
-
-    }

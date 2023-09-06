@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="../css/home.css" />
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 
-  <!-- custom CSS -->
+  <!-- custom CSS and script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>Omnifood</title>
@@ -19,25 +20,25 @@
 <body>
   <nav class="navbar navbar-expand-md bg-light px-5">
     <div class="container-fluid">
-      <a class="navbar-brand pe-5" href="index.html">
+      <a class="navbar-brand pe-5" href="home.html">
         <img class="logo" src="../img/logo3.png" title="Omnifood logo" alt="Omnifood logo">
       </a>
       <!-- hamburger menu icon -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- navbar links -->
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-nowrap">
           <li class="nav-item">
             <a class="nav-link active" href="home.html">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a class="nav-link" href="howitwork.html">How It Works</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a class="nav-link" href="meals.html">Meals</a>
           </li>
           <li class="nav-item">
@@ -46,11 +47,11 @@
           <li class="nav-item">
             <a class="nav-link" href="price.html">Pricing</a>
           </li>
+          <li class="nav-item">
+            <a href="../fr/home_fr.html" class="nav-link link-lang">Français</a>
+          </li>
         </ul>
-        <a href="../fr/howItWork_fr.html" class="french-lang">French</a>
-      </div>
     </div>
-    
   </nav>
 
   <body>
@@ -219,6 +220,12 @@
             </div>
           </div>
         </footer>
+
+        <script>
+$('.nav-link').on('click',function() {
+  $('.navbar-collapse').collapse('hide');
+});
+        </script>
   </body>
 
 </html>
