@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<!-- template for webpages -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omnifood</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="../css/omnifood.css" />
+    <link rel="stylesheet" href="../css/comments.css">
+
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md bg-light px-5">
+      <div class="container-fluid">
+        <a class="navbar-brand pe-5" href="home.html">
+          <img class="logo" src="../img/logo3.png" title="Omnifood logo" alt="Omnifood logo">
+        </a>
+        <!-- hamburger menu icon -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+       
+  
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-nowrap">
+            <li class="nav-item">
+              <a class="nav-link active" href="home.html">Home</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" href="howitwork.html">How It Works</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" href="meals.html">Meals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="price.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="../fr/home_fr.html" class="nav-link link-lang">Français</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+    <div class="container-fluid p-5 mt-5">
+      <main>
+        <div class="alert info-box">warning</div>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username">
+            <div id="usernameHelp" class="form-text"></div>
+
+          </div>       
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Your Comments</textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div class="container d-flex justify-content-center mt-100 mb-100">
+        <div class="row">
+            <div class="col-md-12">
+      
+              <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Recent Comments</h4>
+                      <h6 class="card-subtitle">Latest Comments section by users</h6> </div>
+
+                  <div class="comment-widgets m-b-20">
+
+                      <div class="d-flex flex-row comment-row">
+                          <div class="p-2"><span class="round"><img src="https://i.imgur.com/uIgDDDd.jpg" alt="user" width="50"></span></div>
+                          <div class="comment-text w-100">
+                              <h5>Samso Nagaro</h5>
+                              <div class="comment-footer">
+                                  <span class="date">April 14, 2019</span>
+                                  <span class="label label-info">Pending</span> <span class="action-icons">
+                                          <a href="#" data-abc="true"><i class="fa fa-pencil"></i></a>
+                                          <a href="#" data-abc="true"><i class="fa fa-rotate-right"></i></a>
+                                          <a href="#" data-abc="true"><i class="fa fa-heart"></i></a>
+                                      </span>
+                              </div>
+                              <p class="m-b-5 m-t-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                          </div>
+                      </div>
+
+                      <div class="d-flex flex-row comment-row ">
+                          <div class="p-2"><span class="round"><img src="https://i.imgur.com/tT8rjKC.jpg" alt="user" width="50"></span></div>
+                          <div class="comment-text active w-100">
+                              <h5>Jonty Andrews</h5>
+                              <div class="comment-footer">
+                                  <span class="date">March 13, 2020</span>
+                                  <span class="label label-success">Approved</span> <span class="action-icons active">
+                                          <a href="#" data-abc="true"><i class="fa fa-pencil"></i></a>
+                                          <a href="#" data-abc="true"><i class="fa fa-rotate-right text-success"></i></a>
+                                          <a href="#" data-abc="true"><i class="fa fa-heart text-danger"></i></a>
+                                      </span>
+                              </div>
+                              <p class="m-b-5 m-t-10">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites</p>
+                          </div>
+                      </div>
+
+                      <div class="d-flex flex-row comment-row">
+                          <div class="p-2"><span class="round"><img src="https://i.imgur.com/cAdLHeY.jpg" alt="user" width="50"></span></div>
+                          <div class="comment-text w-100">
+                              <h5>Sarah Tim</h5>
+                              <div class="comment-footer">
+                                  <span class="date">Jan 20, 2020</span>
+                                  <span class="label label-danger">Rejected</span> <span class="action-icons">
+                                          <a href="#" data-abc="true"><i class="fa fa-pencil"></i></a>
+                                          <a href="#" data-abc="true"><i class="fa fa-rotate-right"></i></a>
+                                          <a href="#" data-abc="true"><i class="fa fa-heart"></i></a>
+                                      </span>
+                              </div>
+                              <p class="m-b-5 m-t-10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure</p>
+                          </div>
+                      </div>
+
+                      <div class="d-flex flex-row comment-row">
+                          <div class="p-2"><span class="round"><img src="https://i.imgur.com/uIgDDDd.jpg" alt="user" width="50"></span></div>
+                          <div class="comment-text w-100">
+                              <h5>Samso Nagaro</h5>
+                              <div class="comment-footer">
+                                  <span class="date">March 20, 2020</span>
+                                  <span class="label label-info">Pending</span> <span class="action-icons">
+                                          <a href="#" data-abc="true"><i class="fa fa-pencil"></i></a>
+                                          <a href="#" data-abc="true"><i class="fa fa-rotate-right"></i></a>
+                                          <a href="#" data-abc="true"><i class="fa fa-heart"></i></a>
+                                      </span>
+                              </div>
+                              <p class="m-b-5 m-t-10">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+            </div>
+        </div>
+      </div>
+      </main>
+    </div>
+    <footer class="jumbotron-fluid text-center bg-light p-5">
+      <div class="container text-dark">
+        <div class="row">
+          <div class="col-md py-3">
+            <p>Copyright &copy; Omnifood 2023. All Rights Reserved.</p>
+          </div>
+          <div class="col-md py-3">
+            <h3 class="foot-header">Contact Us</h3>
+            <address class="my-1">
+              21 275 Lakeshore Road, Sainte-Anne-de-Bellevue, QC, H9X 3L9
+            </address>
+            <p class="my-1">514-555-6969</p>
+            <a class="link-dark" href="mailto:info@omnifood.com"
+              >info@omnifood.com</a
+            >
+          </div>
+          <div class="col-md py-3">
+            <h3 class="foot-header">Resources</h3>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="link-dark" href="#">Recipe Directory</a>
+              </li>
+              <li class="nav-item">
+                <a class="link-dark" href="#">Careers</a>
+              </li>
+              <li class="nav-item">
+                <a class="link-dark" href="#">Terms and Conditions </a>
+              </li>
+              <li class="nav-item">
+                <a class="link-dark" href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<script src="../js/comments.js"></script>
+  </body>
+</html>
