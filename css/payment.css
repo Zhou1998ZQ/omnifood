@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#content form {
+    width: 80%;
+    margin: 20px auto 100px;
+    padding: 20px;
+    border: 2px solid #eee;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.progress {
+    width: 80%;
+    margin: 5px auto;
+}
+
+#progressHeader {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+#s1 {
+    text-align: center;
+    flex: 1 1 0;
+}
+
+#s2 {
+    text-align: center;
+    flex: 1 1 0;
+}
+
+#s3 {
+    text-align: center;
+    flex: 1 1 0;
+}
+
+
+.next {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    background-color: #0B5ED7;
+    color: whitesmoke;
+}
+
+.previous {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    background-color: #0B5ED7;
+    color: whitesmoke;
+}
+
+.progress-bar {
+    background-color: #0B5ED7;
+}
+
+
+.smallContent {
+    color: red;
+    font-size: xx-small;
+}
+
+.smallContentDiv {
+    position: relative;
+}
+
+#emailSpan {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+#postalCodeSpan {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+#addressSpan {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+#citySpan {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+#cardNumberSpan {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+#cardholderSpan {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+
+
+
+#CVVDateSpan {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+
+.paymentImg{
+    width: 160px;
+    height: 80px;
+    display: flex;
+    margin: 10px;
+}
+
+.paymentImg img{
+    margin: 10px;
+}
+
+#payment-loading{
+    display: none;
+}
+
+#expiryDateOptions{
+    display: flex;
+}
+
+#expiryDateOptions div{
+    margin-right: 10px;
+}

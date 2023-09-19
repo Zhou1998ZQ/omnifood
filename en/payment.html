@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <link rel="stylesheet" href="../css/omnifood.css" />
+    <link rel="stylesheet" href="../css/payment.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-light px-5">
+        <div class="container-fluid">
+            <a class="navbar-brand pe-5" href="home.html">
+                <img class="logo" src="../img/logo3.png" title="Omnifood logo" alt="Omnifood logo">
+            </a>
+            <!-- hamburger menu icon -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-nowrap">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="howitwork.html">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meals.html">Meals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="price.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fr/home_fr.html" class="nav-link link-lang">Français</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+
+
+    <div id="content">
+        <div id="progressHeader">
+            <span id="s1">Personal Info</span>
+            <span id="s2">Payment</span>
+            <span id="s3">Status</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <form id="personal-info-form" class="row g-3">
+            <div class="col-md-6">
+                <label for="plan" class="form-label">Plan</label>
+                <select id="plan" class="form-select" aria-label="Default select example">
+                    <option selected value="300">STARTER $300 / Month</option>
+                    <option value="600">COMPLETE $600 / Month</option>
+                    <option value="799">LUXURY $799 / Month</option>
+                </select>
+            </div>
+            <div class="col-md-6 smallContentDiv">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <span id="emailSpan" class="smallContent">Please enter a valid email address</span>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+
+            <div class="col-12 smallContentDiv">
+                <label for="inputAddress" class="form-label">Address</label>
+                <span id="addressSpan" class="smallContent">Please enter a address</span>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+
+            <div class="col-md-4 smallContentDiv">
+                <label for="inputCity" class="form-label">City</label>
+                <span id="citySpan" class="smallContent">Please enter a city</span>
+                <input type="text" class="form-control" id="inputCity" placeholder="Sherbrooke">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Province</label>
+                <select id="inputState" class="form-select">
+                    <option value="AB" selected>AB</option>
+                    <option value="BC">BC</option>
+                    <option value="MB">MB</option>
+                    <option value="NB">NB</option>
+                    <option value="NL">NL</option>
+                    <option value="NS">NS</option>
+                    <option value="NT">NT</option>
+                    <option value="NU">NU</option>
+                    <option value="ON">ON</option>
+                    <option value="PE">PE</option>
+                    <option value="QC">QC</option>
+                    <option value="SK">SK</option>
+                    <option value="YT">YT</option>
+                </select>
+            </div>
+            <div class="col-md-4 smallContentDiv">
+                <label for="postalCode" class="form-label">Postal Code</label>
+                <span id="postalCodeSpan" class="smallContent">Please enter a valid postal code</span>
+                <input type="text" class="form-control" id="postalCode" placeholder="A1A 1A1">
+            </div>
+
+            <div class="col-md-2">
+                <button id="next1" type="submit" class="btn btn-primary next">Next</button>
+            </div>
+        </form>
+
+
+
+        <form id="payment-form" style="display: none;" class="row g-3">
+            <div class="col-md-6">
+                <strong>Pay securely with our encrypted credit card form.</strong>
+            </div>
+            <div class="col-md-6 paymentImg">
+                <img src="../img/pay1.png" alt="">
+                <img src="../img/pay2.png" alt="">
+                <img src="../img/pay3.png" alt="">
+                <img src="../img/pay4.png" alt="">
+            </div>
+            <div>
+                Total Price: <span id="price">300</span>$
+            </div>
+            <div class="col-md-6 smallContentDiv">
+                <label for="cardNumber" class="form-label">Card Number</label>
+                <span id="cardNumberSpan" class="smallContent">Please enter a valid card number</span>
+                <input type="text" class="form-control" id="cardNumber" placeholder=" 0000 0000 0000 0000">
+            </div>
+
+            <div class="col-md-6 smallContentDiv">
+                <label for="cardholder" class="form-label">Cardholder Name</label>
+                <span id="cardholderSpan" class="smallContent">Please enter a name</span>
+                <input type="text" class="form-control" id="cardholder">
+            </div>
+
+            <div class="col-md-6 smallContentDiv">
+                <label for="expiryDate" class="form-label">Expiry Date(MM / YY)</label>
+                <div id="expiryDateOptions">
+                    <div class="col-md-3">
+                        <select id="inputState" class="form-select">
+                            <option selected value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <select id="inputState" class="form-select">
+                            <option selected value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 smallContentDiv">
+                <label for="CVV" class="form-label">CVV</label>
+                <span id="CVVDateSpan" class="smallContent">Please enter a valid CVV code</span>
+                <input type="password" class="form-control" id="CVV" placeholder="--- " maxlength="3">
+            </div>
+
+            <div id="payment-loading" class="text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Processing Payment...</p>
+            </div>
+
+            <div class="col-md-2">
+                <button id="previous2" type="submit" class="btn btn-primary previous">Previous</button>
+            </div>
+
+            <div class="col-md-2">
+                <button id="next2" type="submit" class="btn btn-primary next">PLACE ORDER</button>
+            </div>
+        </form>
+
+        <form id="payment-state-form" style="display: none;" class="row g-3">
+            <div class="col-md-6" style="color: green;">
+                <strong>Payment Successful</strong>
+            </div>
+            <div>
+                <div><b style="font-size: xx-large;">order Info:</b></div>
+                <div id="orderId">order id: &nbsp;&nbsp;&nbsp;&nbsp;<span></span></div>
+                <div id="orderPlan">order plan: &nbsp;&nbsp;&nbsp;&nbsp;<span></span></div>
+                <div id="clientEmail">client email: &nbsp;&nbsp;&nbsp;&nbsp;<span></span></div>
+                <div id="clientAddress">client address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span></span>
+                </div>
+                <div id="serviceTime">service time(yyyy/mm/dd): &nbsp;&nbsp;&nbsp;&nbsp;<span></span></div>
+            </div>
+
+            <div class="col-md-2">
+                <button id="next3" type="submit" class="btn btn-primary next"><a style="text-decoration: none;"
+                        href="./home.html">Back To
+                        Main</a></button>
+            </div>
+        </form>
+
+
+
+    </div>
+    <footer class="jumbotron-fluid text-center bg-light p-5">
+        <div class="container text-dark">
+            <div class="row">
+                <div class="col-md py-3">
+                    <p>Copyright &copy; Omnifood 2023. All Rights Reserved.</p>
+                </div>
+                <div class="col-md py-3">
+                    <h3 class="foot-header">Contact Us</h3>
+                    <address class="my-1">
+                        21 275 Lakeshore Road, Sainte-Anne-de-Bellevue, QC, H9X 3L9
+                    </address>
+                    <p class="my-1">514-555-6969</p>
+                    <a class="link-dark" href="mailto:info@omnifood.com">info@omnifood.com</a>
+                </div>
+                <div class="col-md py-3">
+                    <h3 class="foot-header">Resources</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="link-dark" href="#">Recipe Directory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="link-dark" href="#">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="link-dark" href="#">Terms and Conditions </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="link-dark" href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/payment.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const progressBar = $(".progress-bar");
+            const personalInfoForm = $("#personal-info-form");
+            const paymentForm = $("#payment-form");
+            const paymentStateForm = $("#payment-state-form");
+
+            $('#inputEmail4').blur(() => {
+                checkEmail()
+            })
+
+            $('#inputAddress').blur(() => {
+                checkAddress()
+            })
+
+            $('#inputCity').blur(() => {
+                checkCity()
+            })
+
+            $('#postalCode').blur(() => {
+                checkPostalCode()
+            })
+
+            $("#cardNumber").on("keypress", function (e) {
+                const inputValue = e.key;
+                const isNumeric = /^[0-9]$/.test(inputValue);
+                if (!isNumeric) {
+                    e.preventDefault();
+                }
+            });
+
+            $("#cardNumber").on("input", function () {
+                let inputValue = $("#cardNumber").val();
+                inputValue = inputValue.slice(0, 19);
+                inputValue = inputValue.replace(/(\d{4})(?=\d)/g, "$1 ");
+                $("#cardNumber").val(inputValue);
+            })
+
+            $('#cardNumber').blur(() => {
+                checkCardNumber()
+            })
+
+            $('#cardholder').blur(() => {
+                checkCardholder()
+            })
+
+            $('#CVV').blur(() => {
+                checkCVV()
+            })
+
+            $("#next1").click(function (e) {
+
+                e.preventDefault();
+
+                const isEmailValid = checkEmail();
+                const isAddressValid = checkAddress();
+                const isCityValid = checkCity();
+                const isPostalCodeValid = checkPostalCode();
+
+                if (isEmailValid && isAddressValid && isCityValid && isPostalCodeValid) {
+                    $('#price').html($("#plan").val())
+                    personalInfoForm.hide();
+                    paymentForm.show();
+                    progressBar.css("width", "50%");
+                    progressBar.attr("aria-valuenow", "50");
+                } else {
+                    if (!isEmailValid) {
+                        $('#inputEmail4').prev().css('display', 'block')
+                    }
+                    if (!isAddressValid) {
+                        $('#inputAddress').prev().css('display', 'block')
+                    }
+                    if (!isCityValid) {
+                        $('#inputCity').prev().css('display', 'block')
+                    }
+                    if (!isPostalCodeValid) {
+                        $('#postalCode').prev().css('display', 'block')
+                    }
+                }
+            });
+
+            $("#next2").click(function (e) {
+
+                e.preventDefault();
+
+                const isCardValid = checkCardNumber()
+                const isCardholderValid = checkCardholder()
+                const isCVVValid = checkCVV()
+
+                if (isCardValid && isCardholderValid  && isCVVValid) {
+                    $('#payment-loading').show();
+                    setTimeout(() => {
+                        $('#payment-loading').hide();
+                        $('#orderId span').html(generateOrderNumber())
+                        $('#orderPlan span').html(getOrderPlan($("#plan").val()))
+                        $('#clientEmail span').html($('#inputEmail4').val())
+                        $('#clientAddress span').html($('#inputAddress').val() + ', ' + $(
+                                '#inputCity')
+                            .val() +
+                            ', ' + $('#inputState').val() + ', ' + $('#postalCode').val())
+                        $('#serviceTime span').html(getTimeRangeToNextMonth())
+                        personalInfoForm.hide();
+                        paymentForm.hide();
+                        paymentStateForm.show()
+                        progressBar.css("width", "100%");
+                        progressBar.attr("aria-valuenow", "50");
+                    }, 3000)
+                } else {
+                    if (!isCardValid) {
+                        $('#cardNumber').prev().css('display', 'block')
+                    }
+                    if (!isCardholderValid) {
+                        $('#cardholder').prev().css('display', 'block')
+                    }
+                    if (!isCVVValid) {
+                        $('#CVV').prev().css('display', 'block')
+                    }
+                }
+            });
+
+            $("#previous2").click(function (e) {
+                e.preventDefault();
+                paymentForm.hide();
+                paymentStateForm.hide();
+                personalInfoForm.show();
+                progressBar.css("width", "0%");
+                progressBar.attr("aria-valuenow", "50");
+            });
+        });
+    </script>
+</body>
+
+</html>
