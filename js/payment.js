@@ -3,8 +3,7 @@ const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 const cardReg = /\b\d{16}\b/
 const cvvReg = /^\d{3}$/
 const expiryDateReg = /^(0[1-9]|1[0-2])\/[0-9]{2}$/
-
-
+const apiKey = 'USL6AO7O8Y2PO2OJ';
 function checkEmail() {
     const emailValue = $('#inputEmail4').val()
     if (!emailReg.test(emailValue)) {
@@ -15,7 +14,6 @@ function checkEmail() {
         return true
     }
 }
-
 
 function checkAddress() {
     const inputAddress = $('#inputAddress').val()
@@ -139,3 +137,25 @@ function getOrderPlan(amount) {
         return 'LUXURY $799 / Month'
     }
 }
+
+
+function getExchangeRate(callback) {
+    $.ajax({
+        url: 'https://www.alphavantage.co/query',
+        data: {
+            function: 'CURRENCY_EXCHANGE_RATE',
+            from_currency: 'CAD',
+            to_currency: 'USD',
+            apikey: apiKey
+        },
+        dataType: 'json',
+        success: function (data) {
+            var exchangeRate = data['Realtime Currency Exchange Rate']['5. Exchange Rate'];
+            callback(exchangeRate);
+        },
+        error: function () {
+            alert('too many request')
+        }
+    });
+}
+
