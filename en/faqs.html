@@ -288,15 +288,19 @@
 
   var faqs = [ "Do I have to order every week?", "Where do you deliver?", "What if I have allergies?", "What payment options do you take?", "Can I change my plan?", "How do I cancel my subscription?", "How can I edit my address and other personal details?", "What are the delivery hours?", "What is your Freshness Guarantee?", "What if I still have questions?" ];
   var headers = document.getElementsByClassName("accordion-button");
-
-  $(document).ready(() => {
-    for (counter = 0; counter > headers.length; counter++) {
-      headers[counter].innerHTML = faqs[counter];
-    }
-  })
+  var bodies = document.getElementsByClassName("accordion-collapse");
 
   $( "#faqs-autocomplete" ).autocomplete({
-  source: faqs
+  source: faqs,
+  select: function( event, ui ) {
+    let faq = document.getElementById("faqs-autocomplete").value;
+    for (let header = 0; header < headers.length; header++) {
+      if (faq === headers[header].innerText) {
+        $(headers[header]).removeClass("collapsed");
+        $(bodies[header]).addClass("show");
+      }
+    }
+  }
   });
   </script>
 </body>
