@@ -2,7 +2,7 @@
 
 // load modules
 
-@use 'reset';
+// @use 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap');
 
 // overwriting bootstrap default variables
@@ -11,15 +11,14 @@ $primary: #F1F0E8;
 $secondary: #85C384;
 $light: #F1F0E8;
 $dark: #333333;
-$success: #016A70;
+$success: #df7e30;
 
 $emphasis-color-rgb:$dark;
 
 $font-family-base: 'Poppins', sans-serif;
 
 // import bootstrap
-
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../bootstrap/scss/bootstrap.scss";
 
 // declare custom styles
 
@@ -35,5 +34,32 @@ footer {
 }
 
 .link-lang {
-    color: #df7e30;
+    color: $success;
+}
+
+#heading {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    min-height: 300px;
+    padding: 10px;
+}
+
+#heading-bg {
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+#heading-text {
+    position: relative;
+    background-color:rgba(241, 240, 232, 0.5);
+    padding-top: 80px;
+}
+
+.lead {
+    color:$success;
 }

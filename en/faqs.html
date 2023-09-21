@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<!-- template for webpages -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnifood</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JQuery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/omnifood.css">
+
+    <!-- Custom Script -->
+    <script src="../js/faqs.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-light px-5">
+        <div class="container-fluid">
+          <a class="navbar-brand pe-5" href="home.html">
+            <img class="logo" src="../img/logo3.png" title="Omnifood logo" alt="Omnifood logo">
+          </a>
+          <!-- hamburger menu icon -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- navbar links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-nowrap">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="howitwork.html">How It Works</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="meals.html">Meals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="testimonials.html">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="price.html">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="faqs.html">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a href="../fr/home_fr.html" class="nav-link link-lang">Français</a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+
+    <div class="container-fluid p-5 mt-5">
+      <div class="container-fluid" id="heading">
+        <img id="heading-bg" src="../img/Crave-1-4.png" alt="Preparing a healthy meal">
+        <div class="container" id="heading-text">
+        <h1>Frequently Asked Questions</h1>
+        <p>Omnifood is a subscription-based food delivery service which provides professionally cooked meals daily to your door.</p>
+        <p>With Omnifood, simplicity and nutrition are always a priority.</p>
+      </div>
+      </div>
+      <div class="container p-5 mt-5" id="faqs">
+        <p class="lead">Looking for more information?</p>
+<label class="fst-italic" for="faqs-autocomplete">Search our FAQs: </label>
+<br>
+<input class="mb-5 ui-autocomplete-input" id="faqs-autocomplete" size="30" maxlength="100">
+        <div class="accordion" id="faqs-accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Do I have to order every week?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqs-accordion">
+                <div class="accordion-body">
+                    No, you can easily skip a week anytime! Simply visit the "Your Selection" page in the member section of the website and click "Skip Week" on the week you would like to pause your delivery. It's just as easy to unskip a week if you change your mind. You can also manage up to 12 weeks of deliveries ahead of time by clicking your name in the top right corner, then clicking on "Delivery Schedule".
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Where do you deliver?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqs-accordion">
+                <div class="accordion-body">
+                    From big cities to tiny towns, we deliver across Quebec, Ontario, Manitoba, Saskatchewan, Alberta, British Columbia, and the Maritimes.
+
+                    If you would like to verify if we're delivering in your region, you can reach out to our Member Happiness team on our live chat on the bottom-right of your browser, and if you're on our app, under Account > Support. We'll be happy to assist you!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What if I have allergies?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqs-accordion">
+                <div class="accordion-body">
+                    We take great care to ensure that all of our food is prepared safely. We indicate on each recipe the allergens contained in the recipe, and our ingredients are proportioned in individual packages which makes it easy to swap out ingredients. However, we cannot guarantee that there isn't cross contamination. If you have a severe food allergy and want to ensure the utmost caution, we do not recommend you order an Omnifood box.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    What payment options do you take?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqs-accordion">
+                  <div class="accordion-body">
+                    We accept all major credit cards (Visa, Mastercard, AMEX, etc.), as well as Visa Debit and Mastercard Debit.
+
+                    Our payment processing system is managed by Stripe, one of the largest online payment processors in North America. All credit card information is stored on their encrypted servers, which are compliant with strict security regulations. Stripe manages billions of dollars in online payments annually and is our partner of choice to ensure the security of your payment information.
+                  </div>
+                </div>
+              </div>
+              
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                    Can I change my plan?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqs-accordion">
+                  <div class="accordion-body">
+                    Yes! You can change the type or size of your plan before the weekly cut-off in the Member Area of your Goodfood account.
+
+                    To do so:
+                    
+                    • Log in to your account and click on your name in the top right corner, then click "Change Your Plan".
+                    
+                    • Click on "Edit" in the "Your Dinner Plan" section.
+                    
+                    • Browse the different options available and then click "Save" at the bottom to update your plan.
+                  </div>
+                </div>
+              </div>
+              
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                    How do I cancel my subscription?
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqs-accordion">
+                  <div class="accordion-body">
+                    You can cancel your subscription by contacting our Member Happiness team on our live chat (Monday to Friday from 8:00 AM to 10 PM or Saturday & Sunday from 9:00 AM to 5 PM EST).
+                  </div>
+                </div>
+              </div>
+          </div>
+
+    </div>
+    <footer class="jumbotron-fluid text-center bg-light p-5">
+        <div class="container text-dark">
+            <div class="row">
+                <div class="col-md py-3">
+                <p>Copyright &copy; Omnifood 2023. All Rights Reserved.</p>
+            </div>
+            <div class="col-md py-3">
+                <h3 class="foot-header">Contact Us</h3>
+                <address class="my-1">21 275 Lakeshore Road, Sainte-Anne-de-Bellevue, QC, H9X 3L9</address>
+                <p class="my-1">514-555-6969</p>
+                <a class="link-dark" href="mailto:info@omnifood.com">info@omnifood.com</a>
+            </div>
+            <div class="col-md py-3">
+                <h3 class="foot-header">Resources</h3>
+                <ul class="nav flex-column">
+                <li class="nav-item"><a class="link-dark" href="#">Recipe Directory</a></li>
+                <li class="nav-item"><a class="link-dark" href="#">Careers</a></li>
+                <li class="nav-item"><a class="link-dark" href="#">Terms and Conditions
+                </a></li>                
+                <li class="nav-item"><a class="link-dark" href="#">Privacy Policy</a></li>
+            </ul>                
+            </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+
+     
+<script>
+  </script>
+</body>
+
+</html>
