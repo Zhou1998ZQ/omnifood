@@ -330,9 +330,7 @@ body{
         width: 100%;
 
     }
-    &_item{
 
-    }
     &_link{
         &:link,
         &:visited{
@@ -539,7 +537,7 @@ body{
 
 }
 
-.primary{
+/*.primary{
 
     &_up{
         display: block;
@@ -563,10 +561,10 @@ body{
 }
 
 .box{
-    position: absolute;
+    position: relative;
     top: 30%;
     @include respond(tab-port){
-        position: absolute;
+        position: relative;
         top: 22%;
         left: 5%;
 
@@ -581,7 +579,7 @@ body{
   
     
     
-}
+}*/
 
 @keyframes moveright{
     0%{

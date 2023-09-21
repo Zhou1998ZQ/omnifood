@@ -354,6 +354,7 @@ h1 {
 .example-2 .data {
     color: #fff;
     transform: translateY(calc(70px + 4em));
+    background-color: rgba(255,255,255, 0.3);
 }
 
 .example-2 .title a {

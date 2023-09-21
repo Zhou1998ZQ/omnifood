@@ -414,39 +414,49 @@ body {
   width: 80px;
 }
 
-.primary_up {
-  display: block;
-  padding: 10px;
-  color: rgb(223, 126, 48);
-  font-weight: 700;
-  text-transform: uppercase;
-  animation: moveright 5s;
-}
-.primary_down {
-  display: block;
-  padding: 10px;
-  color: #000;
-  font-weight: 400;
-  animation: moveleft 5s;
+/*.primary{
+
+    &_up{
+        display: block;
+
+        padding: 10px;
+        color: $color-primary;
+        font-weight: 700;
+        text-transform: uppercase;
+        animation: moveright 5s;
+
+    }
+    &_down{
+        display: block;
+
+        padding: 10px;
+        color: $color-black;
+        font-weight: 400;
+        animation: moveleft 5s;
+
+    }
 }
 
-.box {
-  position: absolute;
-  top: 30%;
-}
-@media (max-width: 56.25em) {
-  .box {
-    position: absolute;
-    top: 22%;
-    left: 5%;
-  }
-}
-@media (max-width: 37.5em) {
-  .box {
-    top: 15%;
-  }
-}
+.box{
+    position: relative;
+    top: 30%;
+    @include respond(tab-port){
+        position: relative;
+        top: 22%;
+        left: 5%;
 
+    }
+
+    @include respond(phone){
+       top: 15%;
+
+    }
+
+
+
+
+
+}*/
 @keyframes moveright {
   0% {
     opacity: 0;
