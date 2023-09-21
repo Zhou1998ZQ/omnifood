@@ -1,4 +1,4 @@
-console.log(11);
+//control the alert function
 function myAlert(isSuccess, msg) {
 	const myAlert = document.querySelector(".alert");
 	myAlert.classList.add(isSuccess ? "alert-success" : "alert-danger");
@@ -14,12 +14,11 @@ function myAlert(isSuccess, msg) {
 
 const emailReg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const usernameReg = /^[a-zA-Z0-9_]{3,20}$/;
-
+//add validate function on the input element
 document.querySelector("#username").addEventListener("input", function () {
 	const hint = document.querySelector("#usernameHelp");
 	hint.classList.remove("red", "green");
 	const check = usernameReg.test(this.value);
-	console.log(check);
 	if (check) {
 		hint.innerHTML = "valid username";
 		hint.classList.add("green");
@@ -35,7 +34,6 @@ document
 		const hint = document.querySelector("#emailHelp");
 		hint.classList.remove("red", "green");
 		const check = emailReg.test(this.value);
-		console.log(check);
 		if (check) {
 			hint.innerHTML = "valid email";
 			hint.classList.add("green");
@@ -45,22 +43,33 @@ document
 		}
 	});
 
+//post button function, including rendering the page
 document.querySelector(".btn").addEventListener("click", (e) => {
 	e.preventDefault();
 	if (
 		document.querySelector("#emailHelp").classList.contains("green") &&
 		document.querySelector("#usernameHelp").classList.contains("green")
 	) {
-		console.log(2);
 		const username = document.querySelector("#username").value;
 		const content = document.querySelector(
 			"#exampleFormControlTextarea1"
 		).value;
+		let ratting = document.querySelector(".form-select").value;
 
+		// ratting = ratting === null ? "EXCELLENT" : ratting;
+		const showRatting = function () {
+			if (ratting === "EXCELLENT") {
+				return "label-success";
+			} else if (ratting === "GOOD") {
+				return "label-info";
+			} else {
+				return "label-danger";
+			}
+		};
+		console.log(showRatting());
 		const newComment = document.createElement("div");
 		const data = new Date();
 		const dataString = data.toLocaleDateString();
-		console.log(dataString);
 		newComment.classList.add("d-flex", "flex-row", "comment-row");
 		newComment.innerHTML = `<div class="d-flex flex-row comment-row">
         <div class="p-2"><span class="round"><img src="https://i.imgur.com/uIgDDDd.jpg" alt="user" width="50"></span></div>
@@ -68,7 +77,7 @@ document.querySelector(".btn").addEventListener("click", (e) => {
             <h5>${username}</h5>
             <div class="comment-footer">
                 <span class="date">${dataString}</span>
-                <span class="label label-info">Pending</span> <span class="action-icons">
+                <span class="label ${showRatting()}">${ratting}</span> <span class="action-icons">
                         <a href="#" data-abc="true"><i class="fa fa-pencil"></i></a>
                         <a href="#" data-abc="true"><i class="fa fa-rotate-right"></i></a>
                         <a href="#" data-abc="true"><i class="fa fa-heart"></i></a>
