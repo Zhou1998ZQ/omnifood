@@ -12,8 +12,10 @@ function myAlert(isSuccess, msg) {
 	}, 2000);
 }
 
+// regular expression
 const emailReg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const usernameReg = /^[a-zA-Z0-9_]{3,20}$/;
+
 //add validate function on the input element
 document.querySelector("#username").addEventListener("input", function () {
 	const hint = document.querySelector("#usernameHelp");
@@ -91,6 +93,6 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 		const parentElement = document.querySelector(".comment-widgets");
 		parentElement.insertBefore(newComment, parentElement.firstChild);
 	} else {
-		myAlert(false, "Something went wrong");
+		myAlert(false, "Username is required");
 	}
 });
